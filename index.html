@@ -3,6 +3,8 @@
     <head>
         <title>Double Rainbow Nyan Cat</title>
         <link type="text/css" rel="stylesheet" href="demo.css" />
+        <script type="text/javascript"
+                src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <!--
         Original CSS Nyan Cat by Michal Budzynski https://github.com/michalbe/css-nyan-cat
         -->
@@ -97,11 +99,22 @@
                 <div number="8"></div>
             </div>
         </div>
-        <audio loop="loop" src="nyancat.ogg" autoplay="true">
-        <script>
-            document.getElementsByTagName('audio')[0].addEventListener('ended', function(){
-                this.currentTime = 0;
-            }, false);
+        <audio id="intro" src="intro.ogg"></audio>
+        <audio id="loop" src="nyancat.ogg" preload="auto"></audio>
+        <script type="text/javascript">
+            function playLoop() {
+              $('#loop').trigger('play');
+              if ((typeof $('#loop')[0].loop) == "boolean") {
+                $('#loop')[0].loop = true;
+              } else {
+                $('#loop').bind('ended', function () { console.log('asldfj'); $('#loop').trigger('play'); });
+              }
+            }
+
+            $(document).ready(function() {
+              $('#intro').trigger('play');
+              $('#intro').bind('ended', playLoop);
+            });
         </script>
     </body>
 </html>
