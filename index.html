@@ -1,13 +1,14 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Helsinki demo party</title>
-        <link type="text/css" rel="stylesheet" href="demo.css" />    
+        <title>Double Rainbow Nyan Cat</title>
+        <link type="text/css" rel="stylesheet" href="demo.css" />
+        <!--
+        Original CSS Nyan Cat by Michal Budzynski https://github.com/michalbe/css-nyan-cat
+        -->
     </head>
 
     <body>
-        CSS NYAN CAT was created by <a href="http://twitter.com/michalbe">Michal Budzynski</a> for <a href="http://mozillalabs.com/demoparty/helsinki">Mozilla Demo Party</a> in Helsinki on 18.06.2011. 
-        <br/><b style="font-size: 20px;">If you like it, press <a href="https://developer.mozilla.org/pl/demos/detail/css-nyan-cat">"I Like it" button on Mozilla's page</a>.</b>
         <div id="mainContainer">
             <div id="nyanCat">
                 <div id="wholeHead">
@@ -24,7 +25,9 @@
                 </div>
                 <div id="toastBody">
                     <div>
-                        &nbsp;  &nbsp; &nbsp;.&nbsp;&nbsp;.&nbsp; &nbsp; &nbsp;..&nbsp;  &nbsp; &nbsp;.&nbsp;.&nbsp; &nbsp; &nbsp;&nbsp&nbsp&nbsp;..&nbsp;  &nbsp; &nbsp;.&nbsp;&nbsp;.
+                        &nbsp;  &nbsp; &nbsp;.&nbsp;&nbsp;.&nbsp; &nbsp;
+                        &nbsp;..&nbsp;  &nbsp; &nbsp;.&nbsp;.&nbsp; &nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;..&nbsp;  &nbsp; &nbsp;.&nbsp;&nbsp;.
                     </div>
                 </div>
                 <div id="wholeTail">
@@ -94,26 +97,12 @@
                 <div number="8"></div>
             </div>
         </div>
-        <div id="description">It contains 81 DOM elements, 688 lines of pure CSS and one JavaScript function for <br/>looping audio. My CSS fails CSSLint test and I'm really proud of this. <a href="https://github.com/michalbe/css-nyan-cat">Fork me on GitHub</a>,<br/>and see you on <a href="http://ongamestart.com/">onGameStart, first HTML5 game conference ever</a>!<br/>Don't forget to follow me on <a href="http://twitter.com/michalbe">twitter</a> and <a href="http://michalbe.blogspot.com">on my blog</a>.</div>
         <audio loop="loop" src="nyancat.ogg" autoplay="true">
         <script>
             document.getElementsByTagName('audio')[0].addEventListener('ended', function(){
                 this.currentTime = 0;
             }, false);
         </script>
-        <script type="text/javascript">
-    //GOOGLE ANALITICS
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-24051618-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
     </body>
 </html>
  
